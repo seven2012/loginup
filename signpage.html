@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./all.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="signpage" id="signpage">
+      <div data-scroll-reveal="enter from the bottom over 1s" class="sign login" id="sign_login"><a href="#">登录</a></div>
+      <div data-scroll-reveal="enter from the bottom over 1s" class="sign logup" id="sign_logup"><a href="#">注册</a></div>
+    </div>
+
+    <div hidden class="login_page" id="login_page">
+     <div class="logheadWrapper">
+       <a href="#logup_page"><span data-scroll-reveal="enter from the left over 1s" class="tologup">注册</span></a>
+       <span data-scroll-reveal="enter from the top over 1s" class="tologin">登录</span>
+     </div>
+     
+     <form class="signform" action="loginAction" method="post" autocomplete="off">
+         <div data-scroll-reveal="enter from the left over 1s" class="row">
+           <input placeholder="邮箱" autofocus="autofocus" type="text" name="login[email]" id="login_email">
+           <div class="line"></div>
+         </div>
+         <div data-scroll-reveal="enter from the left over 1s" class="row">
+            <input placeholder="密码" type="password" name="login[password]" id="login_password">
+            <div class="line"></div>
+         </div>
+         <div class="action">
+           <a href="#"><span data-scroll-reveal="enter from the right over 1.5s" class="reset">忘记密码</span></a>
+           <input data-scroll-reveal="enter from the bottom over 1s" type="submit" name="commit" value="提交" data-disable-with="提交">
+         </div>
+     </form>
+   </div>
+
+   <div hidden class="logup_page" id="logup_page">
+            <h1 data-scroll-reveal="enter from the top over 1s">注册</h1>
+            <form class="card-form" id="new_user" action="/users" accept-charset="UTF-8" data-remote="true" method="post">
+                <div data-scroll-reveal="enter from the left over 1s" class="row">
+                    <input placeholder="手机" autofocus="autofocus" size="10" type="text" name="user[phone]" id="user_phone">
+                    <div class="line"></div>
+                    <x-send-code url="/phone_verify_code_requests" id="sendCode" data-phone-input="#user_phone">发送验证码</x-send-code>
+
+                </div>
+                <div data-scroll-reveal="enter from the left over 1s" class="row">
+                    <input placeholder="验证码" type="text" name="user[phone_verify_code]" id="user_phone_verify_code">
+                    <div class="line"></div>
+                </div>
+                <div data-scroll-reveal="enter from the left over 1s" class="row">
+                    <input placeholder="密码" type="password" name="user[password]" id="user_password">
+                    <div class="line"></div>
+                </div>
+                <div data-scroll-reveal="enter from the left over 1s" class="row">
+                    <input placeholder="确认密码" type="password" name="user[password_confirmation]" id="user_password_confirmation">
+                    <div class="line"></div>
+                </div>
+                <div data-scroll-reveal="enter from the left over 1s" class="row">
+                    <input placeholder="昵称" type="text" name="user[name]" id="user_name">
+                    <div class="line"></div>
+                </div>
+                <div data-scroll-reveal="enter from the left over 1s" class="row">
+                    <input placeholder="邮箱" type="text" name="user[email]" id="user_email">
+                    <div class="line"></div>
+                </div>
+                <div data-scroll-reveal="enter from the bottom over 1s" class="action">
+                    <input type="submit" name="commit" value="提交" data-disable-with="提交">
+                </div>
+            </form>
+            <a data-scroll-reveal="enter from the left after 0.3s" href="#login_page">已有帐号，直接登录</a>
+        </div>
+  </div>
+  <script src="./js/scrollReveal.js"></script>
+  <script src="./all.js"></script>
+
+  <script>
+    (function(){
+	window.scrollReveal = new scrollReveal({ reset: true, move: '50px'});
+})();
+  </script>
+
+
+</body>
+</html>
