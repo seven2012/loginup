@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>SignIn-signUp</title>
     <link rel="stylesheet" href="./all.css">
 </head>
 
@@ -83,7 +83,7 @@
             window.scrollReveal = new scrollReveal({ reset: true, move: '50px' });
         })();
     </script>
-    <script src=".\node_modules\leancloud-storage\dist\av-min.js"></script>
+    <script src="\\cdn1.lncld.net\static\js\2.4.0\av-min.js"></script>
     <script>
         var APP_ID = 'bL0q8y4bvt6N6I1fwAjYgMpx-gzGzoHsz';
         var APP_KEY = 'xfqv5Xz19taM1WrGmtvaWX2Q';
@@ -95,7 +95,7 @@
         
         let user = AV.User.current()
         if(user){
-            //alert('Welcome '+user.attributes.username )
+            alert('Welcome '+user.attributes.username )
         }
         
         //登录
