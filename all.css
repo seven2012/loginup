@@ -194,7 +194,7 @@ a{
 }
 .login_page .action .reset{
   display:block;
-  margin-left:50%;
+  margin-left:52%;
   font-size:16px;
   margin-top:36px;
   margin-bottom:36px;
@@ -211,6 +211,7 @@ a{
   height: 10px;
   position: absolute;
   top: 11px;
+  left:35%;
 }
 /*注册界面*/
 .logup_page{
