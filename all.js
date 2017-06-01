@@ -25,7 +25,7 @@ let logupHref = document.querySelector('.logup_page a')
        login_page.removeAttribute('hidden')
        logup_page.style.display = 'none'
        
-       window.location.reload()
+      // window.location.reload()
    }
    
 let loginHref = document.querySelector('.tologup')
@@ -33,5 +33,5 @@ let loginHref = document.querySelector('.tologup')
         logup_page.removeAttribute('hidden')
         login_page.style.display = 'none'
        
-       window.location.reload()
+      // window.location.reload()
     }
