@@ -97,11 +97,6 @@ a{
   height:100%;
   z-index:99;
 }
-//./login_page {   
-   transition: 1s;
-   visibility: 0;
-   opacity: 0;
-}
 .logheadWrapper{
   position:relative;
   height:36px;
